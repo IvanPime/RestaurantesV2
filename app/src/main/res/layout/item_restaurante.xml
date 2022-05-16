@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/lyt_parent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/selectableItemBackground"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/spacing_medium"
+    android:clickable="true"
+    android:paddingLeft="@dimen/spacing_large"
+    android:paddingRight="@dimen/spacing_large"
+    android:paddingTop="@dimen/spacing_medium">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="horizontal">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:clipToPadding="true"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="0dp"
+            app:cardPreventCornerOverlap="false"
+            app:cardUseCompatPadding="false">
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ProgressBar
+                    android:id="@+id/loading_wheel"
+                    android:layout_gravity="center"
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <ImageView
+                    android:id="@+id/imgRestaurante"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop" />
+
+
+            </FrameLayout>
+        </androidx.cardview.widget.CardView>
+
+        <View
+            android:layout_width="@dimen/spacing_large"
+            android:layout_height="0dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/tvNombre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="Hooters"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                app:fontFamily="sans-serif-medium" />
+            <TextView
+                android:id="@+id/tvCalificacion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="5.5"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+            <TextView
+                android:id="@+id/tvAnio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="2022"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+            <TextView
+                android:id="@+id/tvCostoPromedio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="485"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/spacing_middle"
+        android:background="@color/grey_5" />
+
+</LinearLayout>
